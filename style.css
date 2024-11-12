@@ -1,0 +1,342 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Fixed navigation menu styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;  /* Position the navbar at the top right corner */
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  padding: 1rem; /* Add padding for spacing */
+}
+
+/* Navigation menu items styling */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+/* Hover effect for menu items */
+.navbar ul li a:hover {
+  color: #ff6347;
+}
+
+/* Section styling */
+section {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;  /* Text color */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Background images for each section (no change here) */
+#home {
+  background-image: url('https://i.pinimg.com/1200x/bb/66/1c/bb661c4a40004bb1d6ceb9808c053ac6.jpg');
+}
+
+#about {
+  background-image: url('https://i.pinimg.com/1200x/26/cf/c4/26cfc42ae2e28904d308c09894a52590.jpg');
+}
+
+#services {
+  background-image: url('https://i.pinimg.com/1200x/da/61/a4/da61a4167aef1597ec0624aa92ee4711.jpg');
+}
+
+#contact {
+  background-image: url('https://i.pinimg.com/1200x/23/30/5f/23305fbe91cce361666204993fc82eb4.jpg');
+}
+
+/* Add overlay for better text visibility */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);  /* Semi-transparent overlay */
+  z-index: 1;  /* Make sure it's below the text */
+}
+
+section > * {
+  position: relative;
+  z-index: 2;  /* Make sure the text is above the overlay */
+}
+
+
+/* Add a header for Brewed Bliss */
+.home-header {
+  position: absolute;
+  left: 2rem;  /* Position it 2rem from the left */
+  top: 2rem;   /* Position it 2rem from the top */
+  z-index: 3;  /* Ensure it stays above the overlay and image */
+}
+
+.home-header h1 {
+  font-size: 48px;  /* Set font size for the company name */
+  font-family: 'Impact', sans-serif;  /* Change font family to Impact */
+  font-weight: bold;
+  color: #fff;  /* Text color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);  /* Adding text shadow for contrast */
+}
+}
+
+/* Styling for the "Welcome to Home" text (left side) */
+.welcome-text {
+  position: absolute;
+  left: 2rem;  /* Position it 2rem from the left */
+  top: 20%;  /* Position it slightly below the top */
+  font-size: 24px;  /* Set font size to 24px */
+  font-weight: normal;
+  color: #fff;  /* Text color */
+  z-index: 3;  /* Ensure it stays above the overlay and image */
+}
+
+/* Styling for the "Coffee" text (Times New Roman, size 30px) */
+.home-text {
+  position: absolute;
+  left: 2rem;  /* Position it 2rem from the left */
+  top: 50%;  /* Center it vertically */
+  transform: translateY(-50%);  /* Adjust to perfectly center the text */
+  font-size: 48px;  /* Set font size to 30px */
+  font-family: 'Verdana', Geneva, sans-serif;  /* Set font to Times New Roman */
+  font-weight: bold;
+  color: #fff;  /* Text color */
+  z-index: 3;  /* Ensure it stays above the overlay and image */
+}
+
+/* Styling for the "Fresh Mind" text below "Coffee" */
+.fresh-mind-text {
+  position: absolute;
+  left: 2rem;  /* Position it 2rem from the left */
+  top: 60%;  /* Position it below the "Coffee" text */
+  font-size: 22px;  /* Set font size to 24px */
+  font-family: 'Verdana', Geneva, sans-serif;  /* Set font to Times New Roman */
+  font-weight: normal;
+  color: #fff;  /* Text color */
+  z-index: 3;  /* Ensure it stays above the overlay and image */
+}
+/* Styling for the Order button */
+.order-button {
+  position: absolute;
+  left: 2rem;  /* Position it 2rem from the left */
+  top: 75%;  /* Position it below the "Fresh Mind" text */
+  padding: 10px 20px;  /* Add some padding to the button */
+  background-color: #ff6347;  /* Button background color */
+  color: #fff;  /* Button text color */
+  font-size: 18px;  /* Font size of the button */
+  font-family: 'Verdana', Geneva, sans-serif;  /* Font of the button */
+  border: none;  /* Remove button border */
+  cursor: pointer;  /* Change cursor to pointer on hover */
+  z-index: 3;  /* Ensure it stays above the overlay and image */
+  transition: background-color 0.3s;  /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.order-button:hover {
+  background-color: #e55347;  /* Change background color when hovered */
+}
+
+
+
+
+
+/* About Section Styling */
+#about {
+  background-image: url('https://i.pinimg.com/1200x/26/cf/c4/26cfc42ae2e28904d308c09894a52590.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#about .about-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Verdana', Geneva, sans-serif;
+}
+
+#about p {
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Services Section Styling */
+#services {
+  background-image: url('https://i.pinimg.com/1200x/da/61/a4/da61a4167aef1597ec0624aa92ee4711.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#services .services-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+}
+
+#services h2 {
+  font-size: 24px;  /* Change font size to 24px for smaller heading */
+  margin-bottom: 20px;
+  font-family: 'Verdana', Geneva, sans-serif;
+}
+
+#services p {
+  font-size: 18px;  /* Change font size to 18px for description text */
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#services ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
+
+/* Contact Section Styling */
+#contact {
+  background-image: url('https://i.pinimg.com/1200x/23/30/5f/23305fbe91cce361666204993fc82eb4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#contact .contact-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: 'Verdana', Geneva, sans-serif;
+}
+
+#contact p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+#contact .contact-details p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e55347;
+}
+/* Background color change when scrolling */
+.scrolled {
+  background-color: #555;
+}
